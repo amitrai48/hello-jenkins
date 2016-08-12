@@ -6,7 +6,7 @@ app.get('/',function(req,res){
     res.send("Hello Jenkins")
 });
 
-app.get('/hello',function(req,res){
+app.get('/message',function(req,res){
     var msg = "Hello " +  (req.query.name || "Anonymous");
     res.send(msg);
 });
