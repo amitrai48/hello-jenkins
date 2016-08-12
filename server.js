@@ -6,8 +6,9 @@ app.get('/',function(req,res){
     res.send("Hello Jenkins")
 });
 
-app. get('/hello',function(req,res){
-    var msg = "Hello " +  req.query.name || "Anonymous"
+app.get('/hello',function(req,res){
+    var msg = "Hello " +  (req.query.name || "Anonymous");
+    res.send(msg);
 });
 app.listen(process.env.PORT || 8084);
 module.exports = app;
